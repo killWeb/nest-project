@@ -1,1 +1,1 @@
-pm2 startOrReload config.js
+pm2 startOrReload build/ecosystem.config.js

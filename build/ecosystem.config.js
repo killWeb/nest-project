@@ -1,4 +1,4 @@
-{
+module.exports = {
     "apps": [{
         "name": "nest-app",
         "script": "dist/main.js",
