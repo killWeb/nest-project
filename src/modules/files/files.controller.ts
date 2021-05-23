@@ -2,23 +2,27 @@ import { Controller, Get, Post, Request } from '@nestjs/common';
 
 @Controller('api/files')
 export class FilesController {
-    @Get('list')
+    @Get('list.paper')
     getFiles(@Request() req) {
         console.log(req.query);
-        return req.query;
+        return [{
+            name: '1111.png',
+            path: 'efbje/efef/efe.png',
+            id: ''
+        }];
     };
 
-    @Post('add')
+    @Post('add.paper')
     addFiles(@Request() req) {
         console.log(req)
     }
 
-    @Post('edit')
+    @Post('edit.paper')
     editFiles(@Request() req) {
         console.log(req)
     }
 
-    @Post('del')
+    @Post('del.paper')
     delFiles(@Request() req) {
         console.log(req)
     }

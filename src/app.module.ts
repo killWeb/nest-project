@@ -2,10 +2,11 @@ import { resolve } from 'path';
 import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { FilesController } from './files/files.controller';
 import { LoggerMiddleWare } from './middleware/logger';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from 'nestjs-config';
+import { LoginController } from './modules/login/login.controller';
+import { FilesController } from './modules/files/files.controller';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { ConfigModule, ConfigService } from 'nestjs-config';
       inject: [ConfigService]
     })
   ],
-  controllers: [AppController, FilesController],
+  controllers: [AppController, FilesController, LoginController],
   providers: [AppService],
 })
 export class AppModule {
